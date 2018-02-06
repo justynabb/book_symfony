@@ -16,8 +16,6 @@
             </li>
         <?php endforeach ?>
     </ul>
+
     </body>
     </html>
-<?php
-$link = null;
-?>

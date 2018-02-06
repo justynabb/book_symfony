@@ -20,5 +20,5 @@ if (is_numeric($_GET['id'])) {
     echo 'tentative de HACK ???';
     echo '<br />';
 }
-
+    include 'footer.php';
 ?>
