@@ -1,9 +1,6 @@
 <?php
-require_once '../model/model.php';
 
-$posts = get_all_posts();
 
-require '../templates/list.php';
 
 //*******************************************
 /*
@@ -24,3 +21,15 @@ $link = null;
 // end___isolating the presentation___06/02/2018
 
 // include the HTML presentation code___06/02/2018
+
+
+function list_action(){
+    $posts = get_all_posts();
+    require 'templates/list.php';
+}
+
+function show_action($p_id) {
+    $posts = get_post_by_id($p_id);
+    require 'templates/show.php';
+
+}

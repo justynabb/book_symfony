@@ -2,12 +2,12 @@
 /** ___templates/showController.php
  */
 ?>
-<?php $title = $post['title'] ?>
+<?php $title = 'Detail' ?>
 <?php ob_start() ?>
-        <h1><?= $post['title'] ?></h1>
+        <h1><?= $posts['title'] ?></h1>
 
-        <div class="date"><?= $post['created_at'] ?></div>
-        <div class="pseudo"><?= $post['pseudo'] ?></div>
+        <div class="date"><?= $posts['created_at'] ?></div>
+        <div class="pseudo"><?= $posts['pseudo'] ?></div>
         <br />
         <br />
 
