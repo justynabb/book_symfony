@@ -26,15 +26,14 @@ function get_all_posts()
     return $posts;
 }
 // start_____create a NEW_FUNCTION___07/02/2018___ in the model.php file that retrieves an individual blog result based on a given id
-function get_post_by_id($id)
+function get_post_by_id($p_id)   //?
 {
-
     $link = open_database_connection();
 
     $query = 'SELECT * FROM vincent_exc_01 WHERE id=:id';
 
     $statement = $link->prepare($query);
-    $statement->bindValue(':id', $id, PDO::PARAM_INT);
+    $statement->bindValue(':id', $p_id, PDO::PARAM_INT); //?
     $statement->execute();
 
     $row = $statement->fetch(PDO::FETCH_ASSOC);
@@ -42,7 +41,30 @@ function get_post_by_id($id)
     close_database_connection($link);
 
     return $row;
-}   // ____end
+}
+//******************* D E L E T E ************************
+function delPost($p_id){
+    $link = open_database_connection();
+
+    $query = 'DELETE FROM vincent_exc_01 WHERE id=:id';
+
+    $statement = $link->prepare($query);
+    $statement->bindValue(':id', $p_id, PDO::PARAM_INT); //?
+    $returnSql = $statement->execute();
+
+    close_database_connection($link);
+    return $returnSql;
+}
+//*****************************************************
+
+
+function modifPost($p_id){function addPost(){
+
+}
+
+}
+
+// ____end
 // ajouter un post dans la bdd
 // supprimer un post dans la bdd
 // maj un post dans la bdd

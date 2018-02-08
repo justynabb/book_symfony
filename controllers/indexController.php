@@ -33,3 +33,9 @@ function show_action($p_id) {
     require 'templates/show.php';
 
 }
+// ************* DELETE action **********
+function delete_action($p_id){
+    $posts = get_post_by_id($p_id);
+    require 'templates/viewDelete.php';
+}
+// ************* DELETE action **********

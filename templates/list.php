@@ -7,7 +7,7 @@
         <!-- changement de variables___06/02/2018-->
         <?php foreach ($posts as $post): ?>
             <li>
-                <a href="/11_nicolas_formulaire/index.php/showController?id=<?=$post['id']?>">
+                <a href="/11_nicolas_formulaire/index.php/showController?id=<?=$post['id']?>"><!-- virtual ROAD !!!-->
                     <?=$post['nom'] ?>
                 </a>
             </li>

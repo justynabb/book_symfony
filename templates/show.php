@@ -11,8 +11,14 @@
         <br />
         <br />
 
-        <a href="indexController.php">Take me home</a>
-
+<ul>
+    <li>
+        <a href="/11_nicolas_formulaire/index.php">Take me home</a>
+    </li>
+    <li>
+        <a href="/11_nicolas_formulaire/index.php/supres?id=<?=$posts['id']?>">Delete</a>
+    </li>
+</ul>
 <?php $content = ob_get_clean() ?>
 
 <?php include 'layout.php';
